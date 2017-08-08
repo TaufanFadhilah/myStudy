@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+  <html ng-app="">
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css"  media="screen,projection"/>
+      <title>Hi! this is Angular</title>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    </head>
+
+    <body>
+      <div class="container">
+        <div class="row">
+          <div class="col l12">
+            <h3>Angular Filter</h3><hr>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col l6">
+            <input type="text" ng-model="upper" id="upper">
+            <label id="upper">Upper Case</label>
+          </div>
+          <div class="col l6">
+            Hello {{upper | uppercase}}, this is Uppercase.
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col l6">
+            <input type="text" ng-model="lower" id="lower">
+            <label id="lower">Lower Case</label>
+          </div>
+          <div class="col l6">
+            Hello {{lower | lowercase}}, this is Lowercase.
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col l6">
+            <input type="number" ng-model="num" id="num">
+            <label id="num">Number Case</label>
+          </div>
+          <div class="col l6">
+            No. :  {{num | number}}
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col l6">
+            <input type="number" ng-model="cur" id="cur">
+            <label id="cur">Currency Case</label>
+          </div>
+          <div class="col l6">
+            Price :  {{cur | currency:"Rp."}}
+          </div>
+        </div>
+      </div>
+  <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/materialize.min.js"></script>
+    
+  </body>
+</html>
